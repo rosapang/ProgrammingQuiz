@@ -1,6 +1,6 @@
 <template>
-  <NavBar />
-  <LogIn />
+  <NavBar/>
+  <router-view/>
 </template>
 
 <script>
@@ -13,10 +13,9 @@
 //   }
 // }
 import NavBar from '@/components/NavBar.vue'
-import LogIn from '@/views/LogIn.vue'
 
 export default {
-  components: {NavBar, LogIn}
+  components: {NavBar}
 }
 </script>
 
