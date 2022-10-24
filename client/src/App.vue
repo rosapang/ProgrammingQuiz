@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
   <main class="form-signin w-100 m-auto">
   <form>
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
@@ -20,11 +21,16 @@
 <script>
 // import ClientTasks from './components/ClientTasks.vue'
 
+// export default {
+//   name: 'App',
+//   components: {
+//     // ClientTasks
+//   }
+// }
+import NavBar from '@/components/NavBar.vue'
+
 export default {
-  name: 'App',
-  components: {
-    // ClientTasks
-  }
+  components: {NavBar}
 }
 </script>
 
