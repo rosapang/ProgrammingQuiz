@@ -14,10 +14,10 @@ python3.8 -m pip install django-cors-headers
 
 ## How to run
 1. at root directory, run `python manage.py runserver`
-2. then cd to client directory, see intructions in ProgrammingQuiz/client/README.md to set up and run the frontend
+2. then cd to client directory, see intructions in ./client/README.md to set up and run the frontend
 With both backend and frontend running, the Monster Quiz is available at http://localhost:8080/
 
 ## dependencies
-folloew the link to install pip if you don't have one. https://pip.pypa.io/en/stable/installation/
-A few dependencies need to installed, follow this:
+1. follow the link to install pip if you don't have one. https://pip.pypa.io/en/stable/installation/ <br/>
+2. A few dependencies need to installed, follow this:
 https://blog.logrocket.com/how-to-build-vue-js-app-django-rest-framework/#why-vuejs-django-rest-framework 
