@@ -1,16 +1,23 @@
 <template>
   <div id="app">
-    <ClientTasks />
+    <p>
+    <!-- <ClientTasks /> -->
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/about">Go to About</router-link>
+    </p>
+  <!-- route outlet -->
+  <!-- component matched by the route will render here -->
+  <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ClientTasks from './components/ClientTasks.vue'
+// import ClientTasks from './components/ClientTasks.vue'
 
 export default {
   name: 'App',
   components: {
-    ClientTasks
+    // ClientTasks
   }
 }
 </script>
