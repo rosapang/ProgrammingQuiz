@@ -1,4 +1,11 @@
-# client
+# client-frontend
+
+## Project prerequest
+```
+yarn global add @vue/cli
+yarn add vue-router@4
+npm install axios
+```
 
 ## Project setup
 ```
