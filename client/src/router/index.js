@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 
 // 1. Define route components.
 // These can be imported from other files
+import HomePage from '@/views/HomePage.vue'
 import LogIn from '@/views/LogIn.vue'
 import SignUp from '@/views/SignUp.vue'
 
@@ -9,6 +10,7 @@ import SignUp from '@/views/SignUp.vue'
 // Each route should map to a component.
 // We'll talk about nested routes later.
 const routes = [
+  { path: '/', component: HomePage},
   { path: '/login', component: LogIn},
   { path: '/signup', component: SignUp}
   ]
