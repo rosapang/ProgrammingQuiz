@@ -7,8 +7,8 @@
         </ul>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-primary me-2">Login</button>
-          <button type="button" class="btn btn-primary">Sign-up</button>
+          <router-link to ="/login" class="btn btn-outline-primary me-2">Login</router-link>
+          <router-link to ="/signup" class="btn btn-primary">Sign-up</router-link>
         </div>
       </div>
     </div>
