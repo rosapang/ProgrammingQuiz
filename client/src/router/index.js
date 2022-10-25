@@ -1,5 +1,6 @@
 import {createRouter, createWebHistory} from 'vue-router'
 
+//https://router.vuejs.org/guide/#javascript
 // 1. Define route components.
 // These can be imported from other files
 import HomePage from '@/views/HomePage.vue'
