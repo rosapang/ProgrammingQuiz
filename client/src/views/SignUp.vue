@@ -1,14 +1,14 @@
 <template>
   <main class="form-signin w-100 m-auto">
-  <form>
+  <form @submit.prevent="submit">
     <h1 class="h3 mb-3 fw-normal">Welcome and Sign Up</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" placeholder="name@example.com">
+      <input v-model="data.email" type="email" class="form-control" placeholder="name@example.com">
       <label>Email address</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" placeholder="Password">
+      <input v-model="data.password" type="password" class="form-control" placeholder="Password">
       <label>Password</label>
     </div>
 
@@ -18,8 +18,30 @@
 </template>
 
 <script>
+import { reactive } from 'vue';
+import axios from 'axios';
+import { useRouter } from 'vue-router';
 
 export default {
   name: 'SignUp',
+  setup(){
+    const data = reactive({
+      email: '',
+      password: ''
+    });
+
+    const router = useRouter();
+
+    const submit = async() => {
+      await axios.post('http://localhost:8000/api/signup', data);
+
+      await router.push('/login');
+    }
+
+    return {
+      data,
+      submit 
+    }
+  }
 }
 </script>
