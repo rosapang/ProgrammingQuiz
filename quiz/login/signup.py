@@ -14,9 +14,18 @@ def signup(username, password):
 
     cursor = my_db.cursor()
 
+    cursor.execute("SELECT username FROM users;")
+    for fetched_name in cursor.fetchall():
+        if username in fetched_name:
+            cursor.close()
+            my_db.close()
+            return {"success": "name taken"}
+
+    cursor.close()
+    cursor = my_db.cursor()
+
     try:
-        cursor.execute("INSERT INTO users (username, password) VALUES ('%s', '%s');"
-                      % (username, password))
+        cursor.execute("INSERT INTO users (username, password) VALUES ('%s', '%s');" % (username, password))
         my_db.commit()
         success = True
     except:
@@ -29,4 +38,4 @@ def signup(username, password):
 
 
 if __name__ == "__main__":
-    print(signup("ligan", "123456"))
+    print(signup("pepper", "123456"))
